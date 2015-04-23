@@ -53,11 +53,7 @@ public class BuddyTabs extends Activity implements OnItemClickListener,
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
-		
 		setContentView(R.layout.buddytabs);
-			
-		
-		
 		TabHost tabHost = (TabHost) findViewById(R.id.tabhost); // The activity
 		// TabHost
 		tabHost.setup();
@@ -98,24 +94,20 @@ public class BuddyTabs extends Activity implements OnItemClickListener,
 
 	private void updateList() {
 		// Retrieve updated buddies List
-		Log.d("UPDATE", "#########in update list function");
 		List<BuddyInfo> latestData = DBHelper.getInstance(this)
 				.getBuddiesForList();
 		buddies.removeAll(buddies);
 		buddies.addAll(latestData);
 		adapter.notifyDataSetChanged();
-		System.out.println("!!adapter set !!!!!!!!!!!1");
 	}
 
 	// For buddy tab
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 			long rowid) {
 		// TODO Auto-generated method stub
-		System.out.println("LIST CLICKED -------");
 		int status = buddies.get(position).getReq_Status();
 		// String buddyName = buddies.get(position).getName();
 		buddyId = buddies.get(position).getId();
-		System.out.println("THE BUDDY ID IS #####################" + buddyId);
 		buddyPhoneNo = buddies.get(position).getNumber();
 		buddyName = buddies.get(position).getName();
 		buddyPosition = position;
@@ -190,25 +182,19 @@ public class BuddyTabs extends Activity implements OnItemClickListener,
 			// add buddy selected
 			{
 			case 0:
-				// open add buddy
-				// screen, if this
-				// selected
+				// open add buddy screen
 				next_screen = new Intent(BuddyTabs.this, AddBuddy.class);
 				startActivity(next_screen);
 				break;
 			case 1:
 				// if edit profile
 				// selected
-				// createDialog(position,
-				// v.getContext());
 
 				CustomDialog change_pass = new CustomDialog(v.getContext());
 				change_pass.show();
 
 				break;
 			case 2:
-				// locate all code goes
-				// here
 				// opens the maps screen
 				Locate.LOCATEALL = true;
 				Intent i = new Intent(BuddyTabs.this, Locate.class);
@@ -253,8 +239,6 @@ public class BuddyTabs extends Activity implements OnItemClickListener,
 								// Remove buddy function call
 								DBHelper.getInstance(getApplicationContext())
 										.removeBuddy(buddyId);
-								// update ListView
-								System.out.println("removed!!!!!!!!");
 								updateList();
 								// Call SMSSender method to send "Remove"
 								// appmessage
