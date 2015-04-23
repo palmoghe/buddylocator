@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/addbuddy_AL_add"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<Button android:id="@+id/addbuddy_B_enterphone"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:text="Enter Phone Number" android:layout_x="0px"
+		android:layout_y="3px"></Button>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:paddingBottom="75dp">
+			<ListView android:id="@+id/addbuddy_lv"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"></ListView>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:gravity="bottom"
+			android:minHeight="75dp">
+
+			<Button android:id="@+id/addbuddy_B_back"
+				android:layout_width="150px" android:layout_height="wrap_content"
+				android:text="Back" android:layout_x="0px" android:layout_y="379px">
+			</Button>
+			
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

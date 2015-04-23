@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.buddy" android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<receiver android:name=".services.SMSReceiver"
+			android:enabled="true">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".services.StartAtBootServiceReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.HOME" />
+			</intent-filter>
+		</receiver>
+		<activity android:name=".Profile" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".Login">
+		</activity>
+		<activity android:name=".BuddyTabs">
+		</activity>
+		<activity android:name=".AddBuddy">
+		</activity>
+		<activity android:name=".EnterBuddyAdd">
+		</activity>
+		<activity android:name=".locate.Locate">
+		</activity>
+		<activity android:name="StartupActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<service android:name=".services.LocationUpdateService"
+			android:enabled="true" android:exported="true">
+		</service>
+		<uses-library android:name="com.google.android.maps" />
+	</application>
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+</manifest>

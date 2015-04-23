@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:focusable="false" 
+    android:focusableInTouchMode="false" 
+    android:autoText="false"
+    android:height="40px" 
+    android:gravity="center_vertical|center_horizontal" 
+    android:width="40px" android:layout_height="80px" 
+    android:text="User Profile"/>
+
+<TableLayout android:id="@+id/TableLayout01" android:layout_height="wrap_content" android:layout_width="fill_parent" android:visibility="visible">
+<TableRow android:id="@+id/TableRowName" android:layout_height="wrap_content" android:layout_width="fill_parent">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextViewName" android:text="Name" android:clickable="false" android:freezesText="true" android:maxLines="1" android:width="100px"></TextView>
+<EditText android:id="@+id/profile_ET_name" android:layout_width="200px" android:layout_height="wrap_content">
+</EditText>
+</TableRow>
+
+<TableRow android:id="@+id/TableRowPw" android:layout_height="wrap_content" android:layout_width="fill_parent">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextViewPw" android:text="Password" android:clickable="false" android:freezesText="true" android:maxLines="1" android:width="100px"></TextView>
+<EditText android:text="" android:id="@+id/profile_ET_password" android:layout_width="200px" android:layout_height="wrap_content"  android:clickable="true" android:numeric="integer" android:password="true" android:maxLength="10">
+</EditText>
+</TableRow>
+
+<TableRow android:id="@+id/TableRowCPw" android:layout_height="wrap_content" android:layout_width="fill_parent">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextViewCPw" android:text="Confirm Password" android:clickable="false" android:freezesText="true" android:maxLines="1" android:width="80px"></TextView>
+<EditText android:text="" android:id="@+id/profile_ET_confirmpwd" android:layout_width="200px" android:layout_height="wrap_content" android:clickable="true" android:numeric="integer" android:password="true" android:maxLength="10">
+</EditText>
+</TableRow>
+
+<TableRow android:id="@+id/TableRowSecQ" android:layout_height="wrap_content" android:layout_width="fill_parent">
+
+
+</TableRow>
+
+<TableRow android:id="@+id/TableRowSecA" android:layout_height="wrap_content" android:layout_width="fill_parent">
+
+
+</TableRow>
+
+</TableLayout>
+<FrameLayout android:id="@+id/FrameLayoutDone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+<Button 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:id="@+id/profile_B_save" android:layout_gravity="right|bottom" 
+android:gravity="center_vertical|center_horizontal|center" 
+android:freezesText="true" android:clickable="true" 
+android:fadingEdge="none" android:width="150px" android:text="Save">
+</Button>
+<Button android:layout_width="wrap_content" 
+
+android:layout_height="wrap_content" 
+android:id="@+id/profile_B_cancel" android:width="150px" android:editable="false" android:layout_gravity="bottom|left" android:text="Cancel"></Button>
+</FrameLayout>
+
+</LinearLayout>

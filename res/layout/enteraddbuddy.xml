@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:id="@+id/enteraddbuddy_AL_addbuddy"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/enteraddbuddy_TV_buddyname"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Name" android:layout_x="7px" android:layout_y="31px">
+	</TextView>
+	<TextView android:id="@+id/enteraddbuddy_TV_phone"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Contact Number" android:layout_x="6px" android:layout_y="71px">
+	</TextView>
+	<EditText android:id="@+id/enteraddbuddy_ET_name"
+		android:layout_width="200px" android:layout_height="40px"
+		android:textSize="18sp" android:layout_x="119px" android:layout_y="16px">
+	</EditText>
+	<EditText android:id="@+id/enteraddbuddy_ET_phone"
+		android:layout_width="200px" android:layout_height="40px"
+		android:textSize="18sp" android:layout_x="118px" android:layout_y="61px" android:numeric="integer"
+		android:maxLength="11">
+	</EditText>
+	<Button android:id="@+id/enteraddbuddy_B_back"
+		android:layout_width="150px" android:layout_height="wrap_content"
+		android:text="Back" android:layout_x="0px" android:layout_y="378px">
+	</Button>
+	<Button android:id="@+id/enteraddbuddy_B_add"
+		android:layout_width="150px" android:layout_height="wrap_content"
+		android:text="Send Request" android:layout_x="171px" android:layout_y="378px"
+		android:clickable="true">
+	</Button>
+	<EditText android:id="@+id/enteraddbuddy_ET_message"
+		android:layout_width="200px" android:layout_height="109px"
+		android:textSize="18sp" android:layout_x="119px" android:layout_y="109px"
+		android:singleLine="false" android:maxLength="95">
+	</EditText>
+	<TextView android:id="@+id/enteraddbuddy_TV_message"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Message" android:layout_x="10px" android:layout_y="122px">
+	</TextView>
+</AbsoluteLayout>
