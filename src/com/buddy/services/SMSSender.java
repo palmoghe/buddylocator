@@ -32,7 +32,6 @@ public class SMSSender
                 null, 
                 MsgData, 
                 null, null);
-		Log.d("LocationUpdateService","########MEssage Sent");
 	}
 	public void SendLocationUpdatetoAll(float lat,float longitude)
 	{
@@ -48,7 +47,6 @@ public class SMSSender
 			if(phNos[i]!=null)
 			{
 			phoneNumber=phNos[i];
-			Log.d("SEnding all","#####Update sending to : "+phoneNumber);
 			SendMessage();
 			}
 			
@@ -56,10 +54,6 @@ public class SMSSender
 		/*
 ----------------------------Till here------------------------------------------------
 		*/
-	//	phoneNumber="5554";
-		//SendMessage();
-
-		Log.d("SMSSENder","###############Location updated sent to all");
 	}	
 	public void SendLocationUpdate()
 	{
@@ -74,9 +68,7 @@ public class SMSSender
 		//string name should contain the user name extractd from the database
 		
 		String name= DBHelper.getInstance(context).getProfileName();
-		System.out.println("#####UN "+name);
 		MsgData=AppCode.concat("ADD:0:"+name+":"+message);
-		Log.d("add request", "########"+MsgData);
 		SendMessage();
 	}
 	
