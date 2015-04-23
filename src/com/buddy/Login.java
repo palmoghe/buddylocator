@@ -70,7 +70,6 @@ public class Login extends Activity implements OnClickListener
 					else
 					{
 						Toast.makeText(getApplicationContext(), "Password Error!", Toast.LENGTH_LONG).show();
-						System.out.println("%%%%%----- password not match");
 						pswd.setTextColor(Color.RED);
 					}
 				}
