@@ -35,12 +35,6 @@ public class SMSReceiver
 	public void onReceive(Context context, Intent intent)
 	{
 		 
-		//Toast toast = Toast.makeText(context, "SMS Received from ", Toast.LENGTH_LONG);
-		//toast.show();
-		Log.d("SMSReceiver","#####Got Into On Recieve");
-		System.out.println("#####Got Into On Recieve");
-		System.out.println("-------------------------------------------------SMS received ..." + intent);
-		
 		if(intent.getAction().equals(ACTION))
 		{
 			Bundle bundle = intent.getExtras();		
@@ -52,8 +46,6 @@ public class SMSReceiver
 				smsMessage[n] = SmsMessage.createFromPdu((byte[])messages[n]);		// converts from pdu format to normal text msg
 			}
 			
-			Log.d("SMSReceiver-parse","#####Call to Parser");
-						
 			parse(context,smsMessage);		// call parsing function to interpret the message
 			
 			//toast = Toast.makeText(context, "SMS Received from "+ smsMessage, Toast.LENGTH_LONG);
@@ -73,8 +65,7 @@ public class SMSReceiver
 		
 	
 		String ReqInfo;
-	//Concatenate Phone no. + Name + MSG
-		
+		//Concatenate Phone no. + Name + MSG
 		if(SenderPhNum.charAt(0)=='+')
 				SenderPhNum=SenderPhNum.substring(3);
 		MessageOperation messageOperation=new 	MessageOperation(con);
@@ -94,7 +85,6 @@ public class SMSReceiver
 					messageOperation.add(ReqInfo);
 					//UPDATING LIST
 					BuddyTabs.updateListBuddyList();
-					System.out.println("####### UPDATE LIST CALLED !");
 				}
 				else if(RqRes.equalsIgnoreCase("1"))
 				{
@@ -111,13 +101,11 @@ public class SMSReceiver
 			}
 			else if(ServiceCode.equalsIgnoreCase("rmv"))
 			{	
-				Log.d("SMSReceiver","#####Callin remove method");
+				Log.d("SMSReceiver","#####Calling remove method");
 				messageOperation.remove(SenderPhNum);
 				//UPDATING LIST
 				BuddyTabs.updateListBuddyList();
-
 				// Call updateList to update the List of buddies on UI dynamically
-
 				if(RqRes.equalsIgnoreCase("0")) 
 				{
 					//RqRes=0  >>SOMEONE HAS REMOVED ME FROM HIS/HER db
