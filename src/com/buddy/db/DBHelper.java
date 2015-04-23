@@ -88,66 +88,8 @@ public class DBHelper {
 				+ "FOREIGN KEY (" + COL_BUDDY_ID + ") REFERENCES "
 				+ TABLE_BUDDY + "(" + COL_BUDDY_ID + ")"
 				+ " ON DELETE CASCADE);");
-		System.out.println("Tables created..!!!");
-
-
-		/*db.execSQL("INSERT INTO " +
-				 TABLE_BUDDY+" VALUES (3,'+919860850429','Mohini', 1,0);");
-				
-				 db.execSQL("INSERT INTO " +
-						  TABLE_LOCATION+" VALUES (3,18.512964,73.878911,'MGRoad');");
-				 
-				 
-		//------------------------------------------------------------------------------
-		// db.execSQL("INSERT INTO " + TABLE_BUDDY
-		// +" VALUES (1,'+91560850429','pari', 0,0);");
-		// db.execSQL("INSERT INTO " + TABLE_MESSAGE +
-		// " VALUES (12,'accept my request !' )");
-		
-		/*
-		 * db.execSQL("INSERT INTO " + TABLE_MESSAGE +
-		 * " VALUES (3,'Please please accept me !' )");
-		 * db.execSQL("INSERT INTO " +
-		 * TABLE_BUDDY+" VALUES (4,'+919860850429','Soni', 1,1);");
-		 */
-		
-		/*  db.execSQL("INSERT INTO " +
-		  TABLE_BUDDY+" VALUES (3,'+919863850429','Pallavi', 0,0);");
-		  db.execSQL("INSERT INTO " +
-		  TABLE_BUDDY+" VALUES (4,'+919867850429','Rohita', 0,0);");
-		  db.execSQL("INSERT INTO " +
-		  TABLE_BUDDY+" VALUES (5,'+919867850429','Arshia', 0,0);");
-		  
-		  
-		  db.execSQL("INSERT INTO " +TABLE_LOCATION+
-		  " VALUES (4,18.51460961300838, 73.82572174072266,'KarveRd');");
-		  db.execSQL("INSERT INTO " +TABLE_LOCATION+
-		  " VALUES (5,18.64681442016212, 74.05549049377441,'KoregaonPark');");
-		  //db.execSQL("INSERT INTO " +
-		  //TABLE_LOCATION+" VALUES (5,18.515806, 73.927164,'Magarpatta');");*/
-		 
-
-		// db.execSQL("INSERT INTO " + TABLE_PROFILE+
-		// " VALUES (1,'BuddyLoc','1234') ");
-		// db.execSQL("INSERT INTO " +
-		// TABLE_LOCATION+" VALUES (5,18.536743,73.892329,'Range Hill Road');");
-		// db.execSQL("INSERT INTO " +
-		// TABLE_LOCATION+" VALUES (4,18.536743,21.892329,'Karvenagar');");
-
-		// db.execSQL("INSERT INTO " +
-		// TABLE_LOCATION+" VALUES (2,19.6,20.3,'CUMMINS');");
-		// db.execSQL("INSERT INTO " +
-		// TABLE_BUDDY+" VALUES (1110,'+919860850429','Jalit', 0,2");*/
-
-		// db.execSQL("INSERT INTO " + TABLE_BUDDY
-		// +" VALUES (3,'+919860850429','Pallavi Moghe', 0,0);");
-		// db.execSQL("INSERT INTO " +
-		// TABLE_BUDDY+" VALUES (4,'+919860850429','Mishu Gupta', 0,0);");
-		// db.execSQL("INSERT INTO " +
-		// TABLE_BUDDY+" VALUES (5,'+919860850429','Apurva Jalit', 0,3);");
-
 	}
-//-------------------------------------------------------------------------------
+
 	public static DBHelper getInstance(Context context) {
 		if (helper == null) {
 			helper = new DBHelper(context);
