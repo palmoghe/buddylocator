@@ -81,13 +81,10 @@ public class AddBuddy extends Activity	implements OnClickListener, OnItemClickLi
 		{
 			ContactInfo contact = new ContactInfo();
 			contact.setName(cursor.getString(cursor.getColumnIndex(People.NAME)).toString());
-			System.out.println("contact NAME %%%%%%5" + contact.getName());
-			System.out.println("contact NUMBER %%%%%%5" + cursor.getString(cursor.getColumnIndex(People.NUMBER)));
 			contact.setNumber(cursor.getString(cursor.getColumnIndex(People.NUMBER)));
 			listOfContacts.add(contact);
 			cursor.moveToNext();
 			n = n - 1;
-			System.out.println("N########" + n);
 		}
 		cursor.moveToFirst();
 		Button enter_phone = (Button)findViewById(R.id.addbuddy_B_enterphone);
