@@ -35,10 +35,6 @@ public class EnterBuddyAdd extends Activity
 		
 		name = getIntent().getStringExtra(NAME);
 		number = getIntent().getStringExtra(NUMBER);
-
-		System.out.println("Name :" + name);
-		System.out.println("Number :" + number);
-		
 		nameText.setText(name);
 		numberText.setText(number);
 		Button send = (Button) findViewById(R.id.enteraddbuddy_B_add);
@@ -74,19 +70,6 @@ public class EnterBuddyAdd extends Activity
 
 	public void onClick(View v) 
 	{
-		/*if(v.getId() == R.id.addbuddy_B_save)
-		{
-			// validate form data
-			// if valid
-			if(saveBuddy())
-			{
-				// Launch BuddyTabs Activity
-			}
-			else
-			{
-				// show regret error message
-			}
-		}*/
 		sendBuddyRequest();
 	}
 	
@@ -111,7 +94,7 @@ public class EnterBuddyAdd extends Activity
 		int BuddyID = DBHelper.getInstance(getApplicationContext()).GetIdFromPhoneNo(phoneNo);
 		if(BuddyID==-1)
 		{
-			System.out.println("#########Buddy Does Not Exists");
+			System.out.println("#########Buddy Does Not Exist");
 			// Send Request by calling SMSSender Method
 			SMSSender sender = new SMSSender(this);
 			sender.setPhoneNumber(phoneNo);
